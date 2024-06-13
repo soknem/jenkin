@@ -5,9 +5,9 @@ pipeline {
         booleanParam(name: 'BUILD_DOCKER', defaultValue: true, description: 'Build Docker Image')
         booleanParam(name: 'DOCKER_DEPLOY', defaultValue: true, description: 'Docker Deploy')
         choice(name: "TEST_CHOICE", choices: ["production", "staging"], description: "Sample multi-choice parameter")
-        string(name: 'REGISTRY_DOCKER', defaultValue: 'muyleangin', description: 'Registry')
-        string(name: 'BUILD_CONTAINER_NAME', defaultValue: 'alumni', description: 'Container')
-        string(name: 'CONTAINER_NAME', defaultValue: 'alumnixjenkins', description: 'Container')
+        string(name: 'REGISTRY_DOCKER', defaultValue: 'sovanra', description: 'Registry')
+        string(name: 'BUILD_CONTAINER_NAME', defaultValue: 'alumni-admin', description: 'Container')
+        string(name: 'CONTAINER_NAME', defaultValue: 'alumni-admin', description: 'Container')
         string(name: 'DOCKER_TAG', defaultValue: 'latest', description: 'Docker Tag')
         string(name: 'REPO_URL', defaultValue: 'http://git.istad.co/cstad-ite-2nd-generation/fswd/alumni/alumni-admin.git', description: 'Repository URL')
         string(name: 'DEPLOY_PORT', defaultValue: '3107', description: 'Port for deployment')
@@ -88,7 +88,7 @@ pipeline {
                 expression { return params.BUILD_DOCKER }
             }
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: 'sovanra-dockerhub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
                     script {
                         def dockerImage = "${params.REGISTRY_DOCKER}/${params.BUILD_CONTAINER_NAME}:${params.DOCKER_TAG}"
                         sh "docker login -u ${USERNAME} -p ${PASSWORD}"
@@ -102,7 +102,7 @@ pipeline {
                 expression { return params.DOCKER_DEPLOY }
             }
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: 'sovanra-dockerhub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
                     script {
                         def dockerImage = "${params.REGISTRY_DOCKER}/${params.BUILD_CONTAINER_NAME}:${params.DOCKER_TAG}"
 
