@@ -10,7 +10,7 @@ pipeline {
         string(name: 'CONTAINER_NAME', defaultValue: 'alumnixjenkins', description: 'Container')
         string(name: 'DOCKER_TAG', defaultValue: 'latest', description: 'Docker Tag')
         string(name: 'REPO_URL', defaultValue: 'http://git.istad.co:3248/cstad-ite-2nd-generation/fswd/alumni/alumni-ui.git', description: 'Repository URL')
-        string(name: 'DEPLOY_PORT', defaultValue: '3106', description: 'Port for deployment')
+        string(name: 'DEPLOY_PORT', defaultValue: '3107', description: 'Port for deployment')
         string(name: 'COMPOSE_FILE', defaultValue: 'docker-compose.yml', description: 'Docker Compose file')
     }
 
