@@ -10,7 +10,7 @@ pipeline {
         string(name: 'BUILD_CONTAINER_NAME', defaultValue: 'alumni-api', description: 'Container')
         string(name: 'CONTAINER_NAME', defaultValue: 'alumaleay', description: 'Container')
         string(name: 'DOCKER_TAG', defaultValue: 'latest', description: 'Docker Tag')
-        string(name: 'REPO_URL', defaultValue: 'http://git.istad.co:3248/cstad-ite-2nd-generation/fswd/alumni/alumni-api.git', description: 'Repository URL')
+        string(name: 'REPO_URL', defaultValue: 'http://git.istad.co/cstad-ite-2nd-generation/fswd/alumni/alumni-api.git', description: 'Repository URL')
         string(name: 'DEPLOY_PORT', defaultValue: '3105', description: 'Port for deployment')
         string(name: 'COMPOSE_FILE', defaultValue: 'docker-compose.yml', description: 'Docker Compose file')
     }
@@ -19,7 +19,7 @@ pipeline {
         TELEGRAM_BOT_TOKEN = '6678469501:AAGO8syPMTxn0gQGksBPRchC-EoC6QRoS5o'
         TELEGRAM_CHAT_ID = '-4174365977'
         CREDENTIAL_GIT = 'gitlab_token'
-        BRANCH = 'dev_logic'
+        BRANCH = 'dev'
     }
 
     stages {
