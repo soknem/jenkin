@@ -6,19 +6,19 @@ pipeline {
         booleanParam(name: 'DOCKER_DEPLOY', defaultValue: true, description: 'Docker Deploy')
         choice(name: "TEST_CHOICE", choices: ["production", "staging"], description: "Sample multi-choice parameter")
         string(name: 'REGISTRY_DOCKER', defaultValue: 'muyleangin', description: 'Registry')
-        string(name: 'BUILD_CONTAINER_NAME', defaultValue: 'alumni-admin', description: 'Container')
-        string(name: 'CONTAINER_NAME', defaultValue: 'alumni-admin', description: 'Container')
+        string(name: 'BUILD_CONTAINER_NAME', defaultValue: 'lms-admin', description: 'Container')
+        string(name: 'CONTAINER_NAME', defaultValue: 'lms-admin', description: 'Container')
         string(name: 'DOCKER_TAG', defaultValue: 'latest', description: 'Docker Tag')
-        string(name: 'REPO_URL', defaultValue: 'http://git.istad.co/cstad-ite-2nd-generation/fswd/alumni/alumni-admin.git', description: 'Repository URL')
-        string(name: 'DEPLOY_PORT', defaultValue: '3107', description: 'Port for deployment')
+        string(name: 'REPO_URL', defaultValue: 'http://git.istad.co/cstad-ite-2nd-generation/fswd/lms/lms-admin.git', description: 'Repository URL')
+        string(name: 'DEPLOY_PORT', defaultValue: '3111', description: 'Port for deployment')
         string(name: 'COMPOSE_FILE', defaultValue: 'docker-compose.yml', description: 'Docker Compose file')
     }
 
     environment {
-        TELEGRAM_BOT_TOKEN = '7390043101:AAEMaazFdCsEp77Q0GiqjBSwCKGReVBepyI'
-        TELEGRAM_CHAT_ID = '-4133149806'
+        TELEGRAM_BOT_TOKEN = '7328554103:AAFwzGvF3lzeQbB8toOciggV5qSknMQDIeY '
+        TELEGRAM_CHAT_ID = '-4225180222'
         CREDENTIAL_GIT = 'gitlab-token'
-        BRANCH = 'main'
+        BRANCH = 'developer'
     }
 
     stages {

@@ -4,19 +4,19 @@ pipeline {
     parameters {
         booleanParam(name: 'BUILD_DOCKER', defaultValue: true, description: 'Build Docker Image')
         booleanParam(name: 'DOCKER_DEPLOY', defaultValue: true, description: 'Docker Deploy')
-        choice(name: "TEST_CHOICE", choices: ["production", "staging"], description: "Sample multi-choice parameter")
+        choice(name: "TEST_CHOICE", choices: ["developer", "staging"], description: "Sample multi-choice parameter")
         string(name: 'REGISTRY_DOCKER', defaultValue: 'muyleangin', description: 'Registry')
-        string(name: 'BUILD_CONTAINER_NAME', defaultValue: 'alumni-ui', description: 'Container')
-        string(name: 'CONTAINER_NAME', defaultValue: 'alumni-ui', description: 'Container')
+        string(name: 'BUILD_CONTAINER_NAME', defaultValue: 'portal-ui', description: 'Container')
+        string(name: 'CONTAINER_NAME', defaultValue: 'portal-ui', description: 'Container')
         string(name: 'DOCKER_TAG', defaultValue: 'latest', description: 'Docker Tag')
-        string(name: 'REPO_URL', defaultValue: 'http://git.istad.co/cstad-ite-2nd-generation/fswd/alumni/alumni-ui.git', description: 'Repository URL')
-        string(name: 'DEPLOY_PORT', defaultValue: '3106', description: 'Port for deployment')
+        string(name: 'REPO_URL', defaultValue: 'http://git.istad.co/cstad-ite-2nd-generation/fswd/lms/lms-portal.git', description: 'Repository URL')
+        string(name: 'DEPLOY_PORT', defaultValue: '3110', description: 'Port for deployment')
         string(name: 'COMPOSE_FILE', defaultValue: 'docker-compose.yml', description: 'Docker Compose file')
     }
 
     environment {
-        TELEGRAM_BOT_TOKEN = '7390043101:AAEMaazFdCsEp77Q0GiqjBSwCKGReVBepyI'
-        TELEGRAM_CHAT_ID = '-4133149806'
+        TELEGRAM_BOT_TOKEN = '7397158198:AAGHQEwsdspqNLYDjTRmJV7RTt_1XIb-E9U'
+        TELEGRAM_CHAT_ID = '-4273928205'
         CREDENTIAL_GIT = 'gitlab-token'
         BRANCH = 'main'
     }
