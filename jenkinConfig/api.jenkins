@@ -16,7 +16,7 @@ pipeline {
     }
 
     environment {
-        TELEGRAM_BOT_TOKEN = '7323526195:AAEECJgPs9xTwZKbmZY5c4eKIy7hBOg3us0        '
+        TELEGRAM_BOT_TOKEN = '7323526195:AAEECJgPs9xTwZKbmZY5c4eKIy7hBOg3us0'
         TELEGRAM_CHAT_ID = '-4289685371'
         CREDENTIAL_GIT = 'gitlab-token'
         BRANCH = 'developer'
