@@ -31,6 +31,9 @@ pipeline {
             }
         }
         stage('Build Docker Image') {
+        agent{
+            label 'worker1'
+        }
             when {
                 expression { return params.BUILD_DOCKER }
             }
