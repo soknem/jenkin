@@ -22,7 +22,14 @@ pipeline {
     }
 
     stages {
+        stage('Clean workspace'){}
+            steps{
+                cleanWs()
+            }
         stage('Get Code from SCM') {
+        agent{
+                    label 'worker1'
+                }
             steps {
                 echo "TEST_CHOICE is ${params.TEST_CHOICE}"
                 script {
@@ -87,6 +94,9 @@ pipeline {
             }
         }
         stage('Push Docker Image to Registry') {
+        agent{
+                    label 'worker1'
+                }
             when {
                 expression { return params.BUILD_DOCKER }
             }
