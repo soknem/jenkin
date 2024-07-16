@@ -20,7 +20,7 @@ pipeline {
         CREDENTIAL_GIT = 'gitlab-token'
         BRANCH = 'developer'
     }
-g
+
     stages {
         stage('Get Code from SCM') {
             steps {
