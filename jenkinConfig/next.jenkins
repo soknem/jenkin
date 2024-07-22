@@ -18,7 +18,7 @@ pipeline {
         TELEGRAM_BOT_TOKEN = '7397158198:AAGHQEwsdspqNLYDjTRmJV7RTt_1XIb-E9U'
         TELEGRAM_CHAT_ID = '-4273928205'
         CREDENTIAL_GIT = 'gitlab-token'
-        BRANCH = 'main'
+        BRANCH = 'prod'
     }
 
     stages {
