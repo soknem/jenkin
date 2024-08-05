@@ -24,7 +24,7 @@ pipeline {
 
     stages {
         stage('Get Code from SCM') {
-            steps {g
+            steps {
                 echo "TEST_CHOICE is ${params.TEST_CHOICE}"
                 script {
                     git branch: "${BRANCH}", url: "${params.REPO_URL}", credentialsId: "${CREDENTIAL_GIT}"
