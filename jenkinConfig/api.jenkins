@@ -44,6 +44,7 @@ pipeline {
                         sh "docker rmi -f ${dockerImage}"
                     }
 
+
                     // Dockerfile content
                     def dockerfileContent = '''
                             # Builder stage
