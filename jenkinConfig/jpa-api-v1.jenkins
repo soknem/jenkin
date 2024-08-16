@@ -9,7 +9,7 @@ pipeline {
         string(name: 'BUILD_CONTAINER_NAME', defaultValue: 'review-api', description: 'Container')
         string(name: 'CONTAINER_NAME', defaultValue: 'review-api', description: 'Container')
         string(name: 'DOCKER_TAG', defaultValue: 'latest', description: 'Docker Tag')
-        string(name: 'REPO_URL', defaultValue: 'http://git.istad.co/cstad-ite-2nd-generation/fswd/lms/lms-api.git', description: 'Repository URL')
+        string(name: 'REPO_URL', defaultValue: 'https://github.com/soknem/review.git', description: 'Repository URL')
         string(name: 'DEPLOY_PORT', defaultValue: '3100', description: 'Port for deployment')
         string(name: 'COMPOSE_FILE', defaultValue: 'docker-compose.yml', description: 'Docker Compose file')
     }
