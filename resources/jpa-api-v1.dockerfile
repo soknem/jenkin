@@ -17,4 +17,4 @@ EXPOSE 8080api.dockerfile
 VOLUME /home/ite/media
 VOLUME /keys   
 # Now you can reference a fixed name in the ENTRYPOINT
-ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=stage", "app.jar"]
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=dev", "app.jar"]
